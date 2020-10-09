@@ -5,6 +5,16 @@
   "author": "@nagomu",
   "license": "MIT",
   "private": true,
+  "jest": {
+    "preset": "ts-jest",
+    "testPathIgnorePatterns": [
+      "<rootDir>/node_modules/"
+    ],
+    "coverageDirectory": "<rootDir>/.coverage",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ]
+  },
   "prettier": {
     "singleQuote": true,
     "trailingComma": "all"
