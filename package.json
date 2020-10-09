@@ -6,7 +6,9 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "lint": "eslint --ext .ts --cache --cache-location=.cache/eslint src",
+    "lint:fix": "yarn lint --fix"
   },
   "jest": {
     "preset": "ts-jest",
