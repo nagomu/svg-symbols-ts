@@ -5,6 +5,9 @@
   "author": "@nagomu",
   "license": "MIT",
   "private": true,
+  "scripts": {
+    "test": "jest"
+  },
   "jest": {
     "preset": "ts-jest",
     "testPathIgnorePatterns": [
