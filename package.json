@@ -1,0 +1,8 @@
+{
+  "name": "svg-symbols-ts",
+  "version": "0.0.1",
+  "repository": "git@github.com:nagomu/svg-symbols-ts.git",
+  "author": "@nagomu",
+  "license": "MIT",
+  "private": true
+}
