@@ -1,0 +1,30 @@
+name: CI
+on: [push]
+jobs:
+  test:
+    env:
+      TZ: 'Asia/Tokyo'
+      NODE_ENV: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v2-beta
+        with:
+          node-version: '12'
+      - name: Cache node modules
+        uses: actions/cache@v1
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-
+      - name: install Yarn
+        run: npm install -g yarn
+      - name: install dependencies
+        run: yarn
+      - name: test
+        run: yarn test
+      - name: lint
+        run: yarn lint
