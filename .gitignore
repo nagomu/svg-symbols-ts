@@ -2,5 +2,6 @@
 .DS_Store
 .cache
 .coverage
+.node-version
 .vscode
 node_modules
