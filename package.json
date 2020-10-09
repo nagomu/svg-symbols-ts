@@ -4,5 +4,8 @@
   "repository": "git@github.com:nagomu/svg-symbols-ts.git",
   "author": "@nagomu",
   "license": "MIT",
-  "private": true
+  "private": true,
+  "devDependencies": {
+    "prettier": "^2.1.2"
+  }
 }
