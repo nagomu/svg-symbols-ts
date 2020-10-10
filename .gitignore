@@ -5,3 +5,4 @@
 .node-version
 .vscode
 node_modules
+src/__tests__/fixtures/expected.svg
