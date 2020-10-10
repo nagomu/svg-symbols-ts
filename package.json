@@ -8,9 +8,10 @@
   "scripts": {
     "build": "tsc --outDir ./",
     "watch": "tsc --outDir ./ -w",
-    "test": "jest",
+    "test": "yarn build && jest",
     "lint": "eslint --ext .ts --cache --cache-location=.cache/eslint src",
-    "lint:fix": "yarn lint --fix"
+    "lint:fix": "yarn lint --fix",
+    "clean": "rm svg-symbols.js && rm src/__tests__/fixtures/output.svg"
   },
   "jest": {
     "preset": "ts-jest",
@@ -40,7 +41,7 @@
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
       "sourceType": "module",
-      "project": "./tsconfig.json"
+      "project": "./tsconfig-lint.json"
     },
     "rules": {
       "simple-import-sort/sort": "error"
