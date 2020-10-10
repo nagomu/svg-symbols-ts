@@ -6,6 +6,8 @@
   "license": "MIT",
   "private": true,
   "scripts": {
+    "build": "tsc --outDir ./",
+    "watch": "tsc --outDir ./ -w",
     "test": "jest",
     "lint": "eslint --ext .ts --cache --cache-location=.cache/eslint src",
     "lint:fix": "yarn lint --fix"
