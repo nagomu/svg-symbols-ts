@@ -44,8 +44,12 @@
     "singleQuote": true,
     "trailingComma": "all"
   },
+  "dependencies": {
+    "jsdom": "^16.4.0"
+  },
   "devDependencies": {
     "@types/jest": "^26.0.14",
+    "@types/jsdom": "^16.2.4",
     "@typescript-eslint/eslint-plugin": "^4.4.0",
     "@typescript-eslint/parser": "^4.4.0",
     "eslint": "^7.11.0",
