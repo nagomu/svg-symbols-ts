@@ -1,6 +1,6 @@
 import { execSync } from 'child_process';
 import fs from 'fs';
-import path = require('path');
+import path from 'path';
 
 describe('svgSymbols', () => {
   const file = path.resolve(__dirname, '../', '../', 'svg-symbols.js');
