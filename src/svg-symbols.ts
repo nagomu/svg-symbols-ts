@@ -13,8 +13,6 @@ const handleError = (message: string): void => {
   process.exit(1);
 };
 
-console.log('hogeeeee');
-
 const handleHelp = () => {
   const HELP_TEXT = `
   -----
