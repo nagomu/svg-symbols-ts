@@ -85,16 +85,27 @@ const generateSvg = async (
   outPath: string,
 ): Promise<void> => {
   const XML_PROC_INSTRUCTIONS = '<?xml version="1.0" encoding="utf-8"?>';
-  const options: svgo.Options = {
+
+  // TODO: Fix type of options
+  const config = {
     plugins: [
       {
-        removeUselessDefs: false,
-        removeScriptElement: true,
+        name: 'preset-default',
+        params: {
+          overrides: {
+            // eslint-disable-next-line
+            // @ts-ignore
+            removeUselessDefs: false,
+            // eslint-disable-next-line
+            // @ts-ignore
+            removeScriptElement: true,
+          },
+        },
       },
     ],
-  };
-  const optimizer = new svgo(options);
-  const result = await optimizer.optimize(svgElement.outerHTML);
+  } as svgo.OptimizeOptions;
+  const result = await svgo.optimize(svgElement.outerHTML, config);
+
   await fs.writeFileSync(outPath, `${XML_PROC_INSTRUCTIONS}${result.data}`);
   console.log(`${green}Success ✨${reset}\nCreated (or Updated): ${outPath}`);
 };
